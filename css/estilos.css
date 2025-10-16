@@ -1,0 +1,189 @@
+/* -------------------- Reset -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------- Estilos Generales -------------------- */
+body {
+  background-color: #d4d4d4;
+}
+
+h1 {
+  color: blue;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #233483;
+  font-size: 30px;
+  margin: 30px;
+}
+
+/* -------------------- Estilo Header -------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+header img {
+  width: 15%;
+  background-color: black;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  padding-right: 20px;
+}
+header nav ul li a {
+  color: whitesmoke;
+}
+
+/* -------------------- Estilo Main (Noticias) -------------------- */
+.bloque_noticia {
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .texto {
+  width: 80%;
+  padding: 20px;
+  text-align: left;
+}
+
+.noticia_img {
+  width: 50%;
+}
+.noticia_img img {
+  width: 100%;
+  min-width: 400px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  main .texto {
+    width: 100%;
+    padding: 10px;
+  }
+  .noticia_img {
+    width: 100%;
+  }
+}
+/* -------------------- Estilo Footer -------------------- */
+footer p {
+  animation: myAnimation 2s infinite;
+  background-color: black;
+  color: whitesmoke;
+  text-align: left;
+  font-size: medium;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer p a {
+  color: whitesmoke;
+}
+
+/* -------------------- Estilo Formulario -------------------- */
+.main_socio {
+  flex-direction: column;
+  min-height: 65vh;
+}
+.main_socio h2 {
+  font-size: 5rem;
+}
+.main_socio .texto {
+  font-size: 2rem;
+  color: #102040;
+  font-family: arial;
+  width: fit-content;
+  border: 2px solid;
+  border-radius: 15px;
+  box-shadow: inset -3px -3px 8px 2px #7c6d6d;
+}
+
+.container-socio {
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 0;
+}
+
+.form-socio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #7c6d6d;
+  max-width: 500px;
+  width: 100%;
+}
+.form-socio .form_bloque {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-socio .form_bloque label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #102040;
+}
+.form-socio .form_bloque input[type=text],
+.form-socio .form_bloque input[type=email],
+.form-socio .form_bloque select {
+  padding: 8px 10px;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.form-socio .radio-group input[type=radio] {
+  accent-color: #233483;
+  margin-right: 10px;
+}
+
+.btn-enviar {
+  background: #233483;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-enviar:hover {
+  background: #102040;
+}
+
+@media screen and (max-width: 768px) {
+  .main_socio h2 {
+    font-size: 2.5rem;
+  }
+  .main_socio .texto {
+    font-size: 1.15rem;
+  }
+  .form-socio {
+    margin: 20px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

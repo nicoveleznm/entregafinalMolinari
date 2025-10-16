@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Sitio web dedicado al club atletico Velez Sarsfield">
+    <meta name="keywords" content="Velez, Velez Sarsfield,club, atletico, formulario, socio, socios, inscripcion">
+    <meta name="robots" content="index, follow">
+    <title>Velez Sarsfield - Socios</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/img/logo.png" alt="LOGO">
+        <nav>
+            <ul>
+                <li>
+                <a href="/index.html">Inicio</a>
+                </li>
+                <li>
+                <a href="/html/noticias.html">Noticias</a>
+                </li>
+                <li>
+                <a href="/html/hacete-socio.html">Hacete Socio</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h2 data-aos="fade-down" data-aos-duration="1000">Hacete Socio</h2>
+    <main class="main_socio">
+        <div class="container-socio">
+            <form class="form-socio" action="/submit" method="post">
+            <div class="form_bloque">
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="Nombre" id="Nombre" required>
+            </div>
+            <div class="form_bloque">
+                <label for="Apellido">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" required>
+            </div>
+            <div class="form_bloque">
+                <label>Genero</label>
+                <div class="radio-group">
+                    <input type="radio" name="Genero" id="hombre" value="hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="genero" id="mujer" value="mujer">
+                    <label for="mujer">Mujer</label>
+                </div>
+            </div>
+            <div class="form_bloque">
+                <label for="pais">Pais</label>
+                <select name="pais" id="pais" required>
+                    <option value="">Seleccione</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="form_bloque">
+                <label for="mail">Mail</label>
+                <input type="email" name="mail" id="mail" required>
+            </div>
+            <div class="form_bloque">
+                <input type="submit" value="enviar" class="btn-enviar">
+            </div>
+            </form>
+        </div>    
+
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Contacto: <a href="mailto: info@velezsarsfield.com" target="_blank">info@velezsarsfield.com</a></p>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

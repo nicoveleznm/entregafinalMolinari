@@ -1,0 +1,221 @@
+// Variables
+$color-primario: #233483;
+$color-secundario: #102040;
+$color-fondo-principal: #d4d4d4;
+$color-texto-header: whitesmoke;
+$color-fondo-header: black;
+$ancho-movil: 768px;
+
+// Mixin para estilos de campo de formulario
+@mixin estilo-input-select {
+  padding: 8px 10px;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* -------------------- Reset -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------- Estilos Generales -------------------- */
+body {
+  background-color: $color-fondo-principal;
+}
+
+h1 {
+  color: blue;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: $color-primario;
+  font-size: 30px;
+  margin: 30px;
+}
+
+
+
+/* -------------------- Estilo Header -------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-fondo-header;
+
+  img {
+    width: 15%;
+    background-color: $color-fondo-header;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding-right: 20px;
+
+    li a {
+      color: $color-texto-header;
+    }
+  }
+}
+
+/* -------------------- Estilo Main (Noticias) -------------------- */
+
+.bloque_noticia {
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+main {
+  .texto {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+  }
+}
+
+.noticia_img {
+  width: 50%;
+
+  img {
+    width: 100%;
+    min-width: 400px;
+    object-fit: cover;
+  }
+}
+
+// Media Query para el layout de noticias
+@media screen and (max-width: $ancho-movil) {
+  main .texto {
+    width: 100%;
+    padding: 10px;
+  }
+  .noticia_img {
+    width: 100%;
+  }
+}
+
+/* -------------------- Estilo Footer -------------------- */
+footer p {
+  animation: myAnimation 2s infinite;
+  background-color: black;
+  color: whitesmoke;
+  text-align: left;
+  font-size: medium;
+}
+
+@keyframes myAnimation {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+footer p a {
+  color: whitesmoke;
+}
+
+/* -------------------- Estilo Formulario -------------------- */
+.main_socio {
+  flex-direction: column;
+  min-height: 65vh;
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  .texto {
+    font-size: 2rem;
+    color: $color-secundario;
+    font-family: arial;
+    width: fit-content;
+    border: 2px solid;
+    border-radius: 15px;
+    box-shadow: inset -3px -3px 8px 2px #7c6d6d;
+  }
+}
+
+.container-socio {
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; // Se repite en el CSS original, pero lo conservo aquí
+  min-height: 60vh;
+  padding: 0;
+}
+
+.form-socio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #7c6d6d;
+  max-width: 500px;
+  width: 100%;
+
+  .form_bloque {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: $color-secundario;
+    }
+
+    // Mixin
+    input[type='text'],
+    input[type='email'],
+    select {
+      @include estilo-input-select;
+    }
+  }
+
+  .radio-group input[type='radio'] {
+    accent-color: $color-primario;
+    margin-right: 10px;
+  }
+}
+
+.btn-enviar {
+  background: $color-primario;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  // Usa el selector padre & para el estado :hover
+  &:hover {
+    background: $color-secundario;
+  }
+}
+
+// Media Query para el formulario
+@media screen and (max-width: $ancho-movil) {
+  .main_socio {
+    h2 {
+      font-size: 2.5rem;
+    }
+    .texto {
+      font-size: 1.15rem;
+    }
+  }
+  .form-socio {
+    margin: 20px;
+  }
+}
