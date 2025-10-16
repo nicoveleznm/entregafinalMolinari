@@ -6,7 +6,7 @@
 
 ###
 
-<h2 align="left">About me</h2>
+<h2 align="left">Sobre mi</h2>
 
 ###
 
@@ -29,3 +29,6 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo"  />
 </div>
+
+<h2 align="left">Este proyecto es la entrega final para el curso de desarrollo web en coderhouse</h2>
+
